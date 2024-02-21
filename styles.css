@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'outfit', Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 75px 0px;
+    width: 100%;
+    background-color: var(--Very-dark-blue-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container{
+    width: 335px;
+    padding: 25px;
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+/* ----- GRID -----*/
+.main-img, h3, .description, hr, .author{
+    grid-column: 1 / span 2;
+}
+
+
+.main-img{   
+    border-radius: 10px;
+    position: relative;
+}
+
+/* ----- Main Image with :hover effect----- */
+.main-img img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+.screen{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: hsla(178, 100%, 50%, 50%);
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    
+}
+.screen img{
+    transform: scale(0.2);
+}
+.screen:hover{
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+h3{
+    margin: 20px 0;
+    color: var(--White);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.description{
+    color: var(--Soft-blue);
+    margin-bottom: 20px;
+}
+
+.price, .time{
+    display: flex;
+    align-items: center;
+}
+
+.price{
+    color: var(--Cyan);
+}
+.price img, .time img{
+    margin-right: 0.3rem; 
+}
+
+.time{
+    padding-left: 90px;
+    color: var(--Soft-blue);
+}
+
+hr{
+   margin: 20px 0;
+   border: 1px solid hsla(215, 51%, 70%, 0.2);
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    color: var(--Soft-blue);
+}
+.author img{
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 30px;
+    margin-right: 15px;
+}
+span{
+    color: white;
+    margin-left: 0.2rem;
+    cursor: pointer;
+}
+h3:hover, span:hover{
+    color: var(--Cyan);
+}
